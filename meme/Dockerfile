@@ -48,6 +48,8 @@ RUN make install
 ENV PATH /opt/bin:$PATH
 
 ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 
 
