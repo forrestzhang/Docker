@@ -49,7 +49,21 @@ ENV PATH /opt/bin:$PATH
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
+#ENV LC_ALL en_US.UTF-8
+
+ENV CURRENT_USER=memeuser \
+    CURRENT_UID=1555 \
+    CURRENT_GID=1555 \
+    CURRENT_DATA=/Data 
+
+
+ADD ./startup.sh /usr/bin/startup
+RUN chmod +x /usr/bin/startup
+
+ENTRYPOINT ["/usr/bin/startup"]
+
+
+
 
 
 
