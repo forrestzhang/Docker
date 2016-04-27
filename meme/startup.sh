@@ -13,8 +13,7 @@ if ! id -u $CURRENT_USER > /dev/null 2>&1; then
 fi
 
 
-if [ -e $CURRENT_DATA ];
-  then
+if [ -e $CURRENT_DATA ]; then
     echo ${GREEN}$CURRENT_DATA${NC} exists
     chown -R $CURRENT_UID $CURRENT_DATA
 else
@@ -22,7 +21,6 @@ else
   chown -R $CURRENT_UID $CURRENT_DATA
 fi
 
-su $CURRENT_USER
 
 for arg in "$*"
 do
