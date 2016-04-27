@@ -45,8 +45,6 @@ RUN make test
 RUN make install
 
 
-RUN mkdir /Data
-
 ENV PATH /opt/bin:$PATH
 
 ENV LANG en_US.UTF-8
