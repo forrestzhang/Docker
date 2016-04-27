@@ -22,7 +22,7 @@ else
   chown -R $CURRENT_UID $CURRENT_DATA
 fi
 
-su $CURRENT_UID
+su $CURRENT_USER
 
 for arg in "$*"
 do
