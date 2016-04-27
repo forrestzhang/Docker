@@ -57,12 +57,12 @@ ENV CURRENT_USER=memeuser \
     CURRENT_DATA=/Data
 
 
-RUN mkdir $CURRENT_DATA
-VOLUME $CURRENT_DATA
+# RUN mkdir $CURRENT_DATA
+# VOLUME $CURRENT_DATA
 
 ADD ./startup.sh /usr/bin/startup
 RUN chmod +x /usr/bin/startup
 
 ENV PATH /opt/bin:$PATH
 
-ENTRYPOINT ["/usr/bin/startup"]
+# ENTRYPOINT ["/usr/bin/startup"]
