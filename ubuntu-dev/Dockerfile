@@ -1,11 +1,11 @@
-FROM ubuntu
+FROM ubuntu:16.04
 
 MAINTAINER Tao Zhang "forrestzhang1982@gmail.com"
 
 RUN apt-get update && apt-get install -y build-essential \
 								  zlib1g-dev \
 								  zlibc \
-								  openjdk-7-jre \
+								  openjdk-9-jre \
 								  git \
 								  libboost-dev \
 								  autoconf \
