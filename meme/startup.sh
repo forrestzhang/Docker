@@ -25,5 +25,10 @@ fi
 for arg in "$*"
 do
   	exec  $*
-
 done
+
+
+if [ -e $CURRENT_DATA ]; then
+  chown -R $CURRENT_UID $CURRENT_DATA/*
+  echo "job finshed!"
+fi
