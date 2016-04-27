@@ -26,4 +26,7 @@ fi
 for arg in "$*"
 do
   	exec  $*
+
 done
+
+chown -R $CURRENT_UID $CURRENT_DATA
