@@ -52,5 +52,5 @@ ENV PATH /opt/software/bwa:/opt/software/jellyfish/bin:$PATH
 
 EXPOSE 6080
 WORKDIR /opt/software/Chorus
-VOLUME /root/Data
+VOLUME /home/ubuntu/Data
 ENTRYPOINT ["/startup.sh"]
