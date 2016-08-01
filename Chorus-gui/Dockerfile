@@ -26,6 +26,8 @@ RUN apt-get update && apt-get install -y cython3  build-essential \
 
 RUN apt-get remove -y python3-matplotlib
 
+RUN apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 RUN mkdir /opt/software
 WORKDIR /opt/software
 ADD https://github.com/gmarcais/Jellyfish/releases/download/v2.2.3/jellyfish-2.2.3.tar.gz /opt/software/
