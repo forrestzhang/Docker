@@ -41,7 +41,8 @@ RUN git clone https://github.com/forrestzhang/Chorus.git
 #WORKDIR /opt/software
 RUN git clone https://github.com/lh3/bwa.git && cd bwa && make
 
-RUN pip3 install numpy pyfasta matplotlib pandas
+RUN pip3 install numpy pyfasta matplotlib
+RUN pip3 install pandas==0.16.2
 
 #RUN mkdir Chorus
 # RUN mkdir -p Chorus/Choruslib
