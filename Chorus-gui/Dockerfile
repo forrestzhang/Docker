@@ -41,14 +41,16 @@ RUN git clone https://github.com/forrestzhang/Chorus.git
 #WORKDIR /opt/software
 RUN git clone https://github.com/lh3/bwa.git && cd bwa && make
 
-RUN pip3 install numpy pyfasta matplotlib
-RUN pip3 install pandas==0.16.2
+RUN pip3 install numpy pyfasta matplotlib pandas
 
 #RUN mkdir Chorus
 # RUN mkdir -p Chorus/Choruslib
 # ADD Chorus.py Chorus/
 # ADD Choruslib/* Chorus/Choruslib/
-
+RUN mkdir -p /home/ubuntu/Desktop
+RUN echo "python3 /opt/software/Chorus/ChorusGUI.py" > /home/ubuntu/Desktop/ChorusGUI.sh
+RUN echo "python3 /opt/software/Chorus/ChorusPBselect.py" > /home/ubuntu/Desktop/ChorusPBselect.sh
+RUN chmod +x /home/ubuntu/Desktop/ChorusGUI.sh /home/ubuntu/Desktop/ChorusPBselect.sh
 ENV PATH /opt/software/bwa:/opt/software/jellyfish/bin:$PATH
 
 EXPOSE 6080
