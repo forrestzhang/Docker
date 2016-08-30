@@ -47,6 +47,7 @@ RUN pip3 install numpy pyfasta matplotlib pandas
 # RUN mkdir -p Chorus/Choruslib
 # ADD Chorus.py Chorus/
 # ADD Choruslib/* Chorus/Choruslib/
+RUN mkdir -p /home/ubuntu/Desktop
 RUN echo "python3 /opt/software/Chorus/ChorusGUI.py" > /home/ubuntu/Desktop/ChorusGUI.sh
 RUN echo "python3 /opt/software/Chorus/ChorusPBselect.py" > /home/ubuntu/Desktop/ChorusPBselect.sh
 RUN chmod +x /home/ubuntu/Desktop/ChorusGUI.sh /home/ubuntu/Desktop/ChorusPBselect.sh
