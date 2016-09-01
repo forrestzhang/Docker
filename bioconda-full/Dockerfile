@@ -1,4 +1,4 @@
-FROM forrestzhang/bioconda
+FROM forrestzhang/bioconda-base
 
 MAINTAINER Tao Zhang "forrestzhang1982@gmail.com"
 
