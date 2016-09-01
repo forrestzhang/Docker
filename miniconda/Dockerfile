@@ -9,3 +9,4 @@ RUN bash Miniconda3-latest-Linux-x86_64.sh -p /opt/miniconda -b
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 ENV PATH=/opt/miniconda/bin:${PATH}
 RUN conda update -y conda
+RUN locale-gen en_US.UTF-8
