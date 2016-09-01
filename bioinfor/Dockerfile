@@ -23,12 +23,8 @@ RUN tar zxvf  tophat-2.1.1.Linux_x86_64.tar.gz && mv tophat-2.1.1.Linux_x86_64 t
 RUN tar zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz && mv cufflinks-2.2.1.Linux_x86_64 cufflinks
 RUN tar zxvf  sratoolkit.2.6.2-ubuntu64.tar.gz && mv sratoolkit.2.6.2-ubuntu64 sratoolkit
 
-
 RUN git clone https://github.com/lh3/bwa.git && cd bwa && make
-
 
 ENV PATH /opt/software/bowtie2:/opt/software/tophat:/opt/software/cufflinks:/opt/software/bwa:/opt/software/sratoolkit:$PATH
 ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.utf8
-ENV LC_ALL en_US.UTF-8
 
